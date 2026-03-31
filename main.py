@@ -13,6 +13,11 @@ class ExpenseTracker:
     def expenses(self):
         return self._expenses
     
-# e1 = ExpenseTracker({"Rent": 1200, "Utilities": 400, "Food" : 600, "Necessities" : 100 })
+    def add(self, item):
+        return self._expenses.append(item)
+    
+ExT = ExpenseTracker([5,10,14])
 
-# print(e1.filter(500))
+ExT.add(2)
+print(ExT.expenses)
+
