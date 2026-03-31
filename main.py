@@ -16,8 +16,13 @@ class ExpenseTracker:
     def add(self, item):
         return self._expenses.append(item)
     
+    def seeAll(self):
+        for i, item in enumerate(self._expenses, start=1):
+            print(f"Expense {i}: {item}")
+            
 ExT = ExpenseTracker([5,10,14])
 
 ExT.add(2)
+ExT.seeAll()
 print(ExT.expenses)
 
